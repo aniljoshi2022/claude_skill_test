@@ -24,7 +24,7 @@ CREATE TABLE `users` (
 * **Applied SQL:** None required — an index on `name` already exists (`idx_users_name`).
 
 ## 4. Post-Optimization Verification
-* **Post-EXPLAIN:** (same as initial) Query uses `idx_users_name` with `type = ref` and `rows = 1`, proving the query is already using an index efficiently.
+* **Post-EXPLAIN:** Query uses `idx_users_name` with `type = ref` and `rows = 1`, proving the query is already using an index efficiently.
 
 ## Notes
 This query is already optimal for point lookups by `name`. No schema changes were applied.
